@@ -3,7 +3,7 @@ hystrix:
     productOfferingConsumerCommandKey:
       circuitBreaker:
         errorThresholdPercentage: 50.0
-        requestVolumeThreshold: 4
+        requestVolumeThreshold: 2
         sleepWindowInMilliseconds: 70000
       execution:
         isolation:
@@ -12,4 +12,4 @@ hystrix:
             timeoutInMilliseconds: 20000
       metrics:
         rollingStats:
-          timeInMilliseconds: 90000
+          timeInMilliseconds: 150000
