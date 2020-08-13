@@ -7,7 +7,7 @@ productOffering:
       server:
         address: localhost:9092
     groupId: productImport_id
-    topic: rest
+    topic: resting
   publisher:
     topic: ProductImportResponse
 kafka:
