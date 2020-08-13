@@ -1,0 +1,14 @@
+server:
+  port: 8085
+spring:
+  kafka:
+    template:
+      default-topic: rest
+    producer:
+      bootstrap-servers: localhost:9092
+      properties:  
+        acks: all
+        retries: 4 
+        retry.backoff.ms: 10000
+        max.block.ms: 6000
+        delivery.timeout.ms: 60000

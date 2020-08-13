@@ -1,0 +1,20 @@
+server:
+  port: 8087
+
+productOffering:
+  consumer:
+    bootstrap:
+      server:
+        address: localhost:9092
+    groupId: productImport_id
+    topic: rest
+  publisher:
+    topic: ProductImportResponse
+kafka:
+  acknowledgment:
+    sleep:
+      time: 30000
+swiProductImport:
+  webService:
+    soap-action: document/http://siebel.com/asi/V0:SWIProductImportUpsert
+    url: http://localhost:8081/SWIProductImportUpsert

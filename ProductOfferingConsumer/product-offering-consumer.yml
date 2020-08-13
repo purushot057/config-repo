@@ -1,0 +1,15 @@
+hystrix:
+  command:
+    productOfferingConsumerCommandKey:
+      circuitBreaker:
+        errorThresholdPercentage: 50.0
+        requestVolumeThreshold: 2
+        sleepWindowInMilliseconds: 70000
+      execution:
+        isolation:
+          strategy: SEMAPHORE
+          thread:
+            timeoutInMilliseconds: 20000
+      metrics:
+        rollingStats:
+          timeInMilliseconds: 90000
