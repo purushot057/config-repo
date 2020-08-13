@@ -5,9 +5,9 @@ productOffering:
   consumer:
     bootstrap:
       server:
-        address: localhost:9092
+        address: localhost:9093
     groupId: productImport_id
-    topic: rest
+    topic: resting
   publisher:
     topic: ProductImportResponse
 kafka:
