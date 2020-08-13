@@ -4,7 +4,7 @@ hystrix:
       circuitBreaker:
         errorThresholdPercentage: 50.0
         requestVolumeThreshold: 2
-        sleepWindowInMilliseconds: 50000
+        sleepWindowInMilliseconds: 70000
       execution:
         isolation:
           strategy: SEMAPHORE
