@@ -18,3 +18,8 @@ swiProductImport:
   webService:
     soap-action: document/http://siebel.com/asi/V0:SWIProductImportUpsert
     url: http://localhost:8081/SWIProductImportUpsert
+    
+retry:
+  max-attempts: 3
+  backoff-delay: 1000
+  backoff-multiplier: 1.5
