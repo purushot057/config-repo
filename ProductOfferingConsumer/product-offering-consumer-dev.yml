@@ -10,14 +10,11 @@ productOffering:
     topic: rest
   publisher:
     topic: ProductImportResponse
+
 kafka:
-  acknowledgment:
+  nack:
     sleep:
-      time: 30000
-swiProductImport:
-  webService:
-    soap-action: document/http://siebel.com/asi/V0:SWIProductImportUpsert
-    url: http://localhost:8081/SWIProductImportUpsert
+      time: 70000
     
 retry:
   max-attempts: 3
