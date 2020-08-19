@@ -3,7 +3,7 @@ server:
 spring:
   kafka:
     template:
-      default-topic: rest
+      default-topic: ProductOfferingRequest
     producer:
       bootstrap-servers: localhost:9092
       properties:  
