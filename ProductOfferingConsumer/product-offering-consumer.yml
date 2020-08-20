@@ -18,10 +18,10 @@ resilience4j:
           maxConcurrentCalls: 4  
 
 retry:
-   instances:
-     productOfferingConsumerCommandKey:
-         maxRetryAttempts: 3
-         waitDuration: 1000
-         retryExceptions:
-         -   java.net.ConnectException
+  instances:
+    productOfferingConsumerCommandKey:
+      maxRetryAttempts: 3
+      waitDuration: 1000
+      retryExceptions:
+      -   java.net.ConnectException
 
