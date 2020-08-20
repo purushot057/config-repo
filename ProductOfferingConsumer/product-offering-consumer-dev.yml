@@ -14,14 +14,14 @@ productOffering:
 kafka:
   nack:
     sleep:
-      time: 70000
+      time: 40000
     
 retry:
   max-attempts: 3
   backoff-delay: 1000
-  backoff-multiplier: 1.5
+  backoff-multiplier: 1
 
 client:
   soap-action: document/http://siebel.com/asi/V0:SWIProductImportUpsert
   default-uri: http://localhost:8081/SWIProductImportUpsert
-  timeout: 20000
+  timeout: 40000
