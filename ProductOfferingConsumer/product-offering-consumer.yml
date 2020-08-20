@@ -9,3 +9,10 @@ resilience4j.circuitbreaker:
       slowCallRateThreshold: 100
       waitDurationInOpenState: 70000ms
       permittedNumberOfCallsInHalfOpenState: 2
+      
+      
+ resilience4j.bulkhead:
+  instances:
+    productOfferingConsumerCommandKey:
+      maxWaitDuration: 10ms
+      maxConcurrentCalls: 4  
