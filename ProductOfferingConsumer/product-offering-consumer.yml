@@ -1,18 +1,18 @@
-resilience4j.circuitbreaker:
-  instances:
-    productOfferingConsumerCommandKey:
-      slidingWindowType: TIME_BASED
-      failureRateThreshold: 50
-      slidingWindowSize: 150
-      minimumNumberOfCalls: 2
-      slowCallDurationThreshold: 18000
-      slowCallRateThreshold: 100
-      waitDurationInOpenState: 70000ms
-      permittedNumberOfCallsInHalfOpenState: 2
-      
-      
- resilience4j.bulkhead:
-  instances:
-    productOfferingConsumerCommandKey:
-      maxWaitDuration: 10ms
-      maxConcurrentCalls: 4  
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      productOfferingConsumerCommandKey:
+        slidingWindowType: TIME_BASED
+        failureRateThreshold: 50
+        slidingWindowSize: 150
+        minimumNumberOfCalls: 2
+        slowCallDurationThreshold: 18000
+        slowCallRateThreshold: 100
+        waitDurationInOpenState: 70000ms
+        permittedNumberOfCallsInHalfOpenState: 2
+  bulkhead:
+    instances:
+        productOfferingConsumerCommandKey:
+          maxWaitDuration: 10ms
+          maxConcurrentCalls: 4  
