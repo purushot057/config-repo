@@ -1,15 +1,11 @@
-hystrix:
-  command:
+resilience4j.circuitbreaker:
+  instances:
     productOfferingConsumerCommandKey:
-      circuitBreaker:
-        errorThresholdPercentage: 50.0
-        requestVolumeThreshold: 2
-        sleepWindowInMilliseconds: 70000
-      execution:
-        isolation:
-          strategy: SEMAPHORE
-          thread:
-            timeoutInMilliseconds: 20000
-      metrics:
-        rollingStats:
-          timeInMilliseconds: 150000
+      slidingWindowType: TIME_BASED
+      failureRateThreshold: 50
+      slidingWindowSize: 150
+      minimumNumberOfCalls: 2
+      slowCallDurationThreshold: 18000
+      slowCallRateThreshold: 100
+      waitDurationInOpenState: 70000ms
+      permittedNumberOfCallsInHalfOpenState: 2
