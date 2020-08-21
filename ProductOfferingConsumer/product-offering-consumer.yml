@@ -15,7 +15,7 @@ resilience4j:
     instances:
         productOfferingConsumerCommandKey:
           maxWaitDuration: 10ms
-          maxConcurrentCalls: 4  
+          maxConcurrentCalls: 3  
 
   retry:
     instances:
