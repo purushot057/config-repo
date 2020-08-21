@@ -20,7 +20,7 @@ resilience4j:
   retry:
     instances:
       productOfferingConsumerCommandKey:
-        maxRetryAttempts: 2
+        maxRetryAttempts: 4
         waitDuration: 1000
         retryExceptions:
         -   java.net.ConnectException
