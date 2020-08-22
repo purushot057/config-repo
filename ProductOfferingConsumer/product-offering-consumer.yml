@@ -3,24 +3,23 @@ resilience4j:
   circuitbreaker:
     instances:
       productOfferingConsumerCommandKey:
-        slidingWindowType: TIME_BASED
+        slidingWindowType: COUNT_BASED
         failureRateThreshold: 50
-        slidingWindowSize: 150
-        minimumNumberOfCalls: 2
-        slowCallDurationThreshold: 50000
+        slidingWindowSize: 10
+        minimumNumberOfCalls: 4
+        slowCallDurationThreshold: 30000
         slowCallRateThreshold: 100
         waitDurationInOpenState: 120000ms
         permittedNumberOfCallsInHalfOpenState: 2
   bulkhead:
     instances:
         productOfferingConsumerCommandKey:
-          maxWaitDuration: 10ms
-          maxConcurrentCalls: 4  
+          maxConcurrentCalls: 1  
 
   retry:
     instances:
       productOfferingConsumerCommandKey:
-        maxRetryAttempts: 5
+        maxRetryAttempts: 3
         waitDuration: 1000
         retryExceptions:
         -   java.net.ConnectException
